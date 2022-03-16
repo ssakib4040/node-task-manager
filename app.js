@@ -17,6 +17,7 @@ app.get("/hello", (req, res) => {
 
 app.use("/api/v1/tasks", tasks);
 
+const HOST = "0.0.0.0";
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, console.log(`server is running on port ${PORT}`));
+app.listen(PORT, HOST, console.log(`server is running on port ${PORT}`));
