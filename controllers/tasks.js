@@ -12,7 +12,7 @@ const getAlltasks = async (req, res) => {
 const createTask = async (req, res) => {
   const { name, completed } = req.body;
 
-  if (!name || !completed) {
+  if (!name) {
     return res.status(500).json({
       msg: "Please fill all the fields",
     });
